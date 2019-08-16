@@ -35,11 +35,28 @@
         .menuR{
             float: right;
             border:1px solid black ;
-        }
-        body > div > div > div.menuR{
-            display: inline-block;
             height: 96px;
         }
+
+        body > div > div > div.menuL > ul{
+            border:1px solid black;
+        }
+        body > div > div > div.menuR > ul{
+            border:1px solid black;
+        }
+
+        body > div > div > div.menuL > ul > li{
+             border:1px solid black;
+
+         }
+        body > div > div > div.menuR > ul > li{
+            border:1px solid black;
+        }
+        body > div > div > div > div.menuR > ul{
+            margin-top: 25px;
+        }
+
+
     </style>
 
 
@@ -47,7 +64,8 @@
 <body>
 <div>
     <div class="menuwrapper">
-        <div class="menuL">
+        <div>
+            <div class="menuL">
             <ul>
                 <li class="active">Winter</li>
                 <li><a>Home</a></li>
@@ -55,13 +73,15 @@
                 <li><a>Dropdown</a></li>
                 <li><a>Disabled</a></li>
             </ul>
+            </div>
+            <div class="menuR">
+                <ul>
+                    <li><a>Search</a></li>
+                    <li><a>ButtonSearch</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="menuR">
-            <ul>
-                <li><a>Search</a></li>
-                <li><a>ButtonSearch</a></li>
-            </ul>
-        </div>
+
     </div>
 </div>
 
