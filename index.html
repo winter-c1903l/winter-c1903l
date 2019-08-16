@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="javascript" href="/js/index.css">
+    <style>
+        .menuwrapper{
+            border: 1px solid black;
+            overflow: auto;
+            background: white;
+        }
+        body > div > div > div.menuL{
+            display: inline-block;
+        }
+        .menuwrapper ul li{
+            display: inline-block;
+            padding: 15px;
+            font-size: 20px;
+            color: gray;
+        }
+        .menuwrapper ul li.active {
+            color: deepskyblue;
+            background-color: #f8f8f8;
+            padding: 15px;
+            font-size: 30px;
+        }
+        .menuwrapper ul li a:hover{
+            color: deepskyblue;
+        }
+        .menuL{
+            float: left;
+            border:1px solid black ;
+        }
+        .menuR{
+            float: right;
+            border:1px solid black ;
+        }
+        body > div > div > div.menuR{
+            display: inline-block;
+            height: 96px;
+        }
+    </style>
+
+
 </head>
 <body>
+<div>
+    <div class="menuwrapper">
+        <div class="menuL">
+            <ul>
+                <li class="active">Winter</li>
+                <li><a>Home</a></li>
+                <li><a>Link</a></li>
+                <li><a>Dropdown</a></li>
+                <li><a>Disabled</a></li>
+            </ul>
+        </div>
+        <div class="menuR">
+            <ul>
+                <li><a>Search</a></li>
+                <li><a>ButtonSearch</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
