@@ -4,86 +4,111 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="javascript" href="/js/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .menuwrapper{
-            border: 1px solid black;
-            overflow: auto;
-            background: white;
-        }
-        body > div > div > div.menuL{
-            display: inline-block;
-        }
-        .menuwrapper ul li{
-            display: inline-block;
-            padding: 15px;
-            font-size: 20px;
-            color: gray;
-        }
-        .menuwrapper ul li.active {
-            color: deepskyblue;
+        .wrapper{
             background-color: #f8f8f8;
-            padding: 15px;
-            font-size: 30px;
+            height: 53px;
+            margin-top: 10px;
+            margin-left: 3%;
+            margin-right: 3%;
         }
-        .menuwrapper ul li a:hover{
-            color: deepskyblue;
+       .wrapper1{
+           height: 30px;
+           padding-top: 18px;
+       }
+        .logo{
+            padding-left: 10px;
+            font-size: large;
+            color: lightgreen;
         }
-        .menuL{
-            float: left;
-            border:1px solid black ;
+        .wrapper2{
+            height: 25px;
+            background-color: white;
+            border-radius: 5%;
+            margin-top: -5px;
+            padding-top: 5px;
+            padding-right: 10px;
+            margin-right: 20px;
+            padding-left: 10px;
         }
-        .menuR{
-            float: right;
-            border:1px solid black ;
-            height: 96px;
+        .button{
+            border: 1px solid lightgreen;
+            color: lightgreen;
+            background-color: white;
+            width: 70px;
+            height: 30px;
+            margin-top: -10px;
+            padding-top: 7px;
+            padding-left: 17px;
+            margin-right: 5px;
+            border-radius: 7%;
+        }
+        .dropdown{
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            padding-left: 10px;
+            margin-top: 10px;
+            list-style-type: none;
+        }
+        body > div > div > div > div > a:hover{
+            color: lightgreen;
         }
 
-        body > div > div > div.menuL > ul{
-            border:1px solid black;
-        }
-        body > div > div > div.menuR > ul{
-            border:1px solid black;
-        }
+        @media(min-width: 360px) {
+            .wrapper1{
+                display: grid;
+                grid-template-columns: 100px 100px 100px 120px 400px 300px 300px;
+            }
 
-        body > div > div > div.menuL > ul > li{
-             border:1px solid black;
-
-         }
-        body > div > div > div.menuR > ul > li{
-            border:1px solid black;
         }
-        body > div > div > div > div.menuR > ul{
-            margin-top: 25px;
-        }
-
-
     </style>
 
 
 </head>
 <body>
-<div>
-    <div class="menuwrapper">
-        <div>
-            <div class="menuL">
-            <ul>
-                <li class="active">Winter</li>
-                <li><a>Home</a></li>
-                <li><a>Link</a></li>
-                <li><a>Dropdown</a></li>
-                <li><a>Disabled</a></li>
-            </ul>
-            </div>
-            <div class="menuR">
-                <ul>
-                    <li><a>Search</a></li>
-                    <li><a>ButtonSearch</a></li>
+<div class="background">
+    <div  class="wrapper">
+        <div class="wrapper1">
+            <div class="logo">WINTER</div>
+            <div><a>Home</a></div>
+            <div><a>Link</a></div>
+            <div class="dropdown-menu" onclick="menu_open()">
+                <a>Dropdown <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown"style="display: none">
+                    <li>action</li>
+                    <li>action</li>
+                    <li>action</li>
                 </ul>
+            </div>
+            <div><a>Disabled</a></div>
+            <div>
+            <div class="wrapper2">Search</div>
+            </div>
+            <div>
+            <div class="button">Search</div>
             </div>
         </div>
 
     </div>
 </div>
-
+<script src="https://kit.fontawesome.com/c79d60eb1d.js" data-auto-replace-svg="nest"></script>
+<script>
+    function menu_open() {
+        let x = document.querySelector('.dropdown');
+        if(x.style.display ==='none'){
+            x.style.display ='block';
+        }else {
+            x.style.display = 'none';
+        }
+        let y = document.querySelector('.dropdown-menu');
+        if (x.style.display === 'none'){
+            y.style.background = '#f8f8f8';
+        } else {
+            y.style.background = '#f7f7f7';
+        }
+    }
+</script>
 </body>
 </html>
