@@ -1,4 +1,4 @@
-* {border: 1px solid grey;}
+/** {border: 1px solid grey;}*/
 body {
     font-family: sans-serif;
     margin: auto;
@@ -28,8 +28,14 @@ body {
 }
 
 .pagination {
+    border: 1px solid;
     padding: 30px;
     height: 10em;
+}
+.pagin {
+    border: 1px;
+    display: inline-block;
+    text-align: center;
 }
 
 .footer{
