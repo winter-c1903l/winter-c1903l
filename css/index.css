@@ -53,6 +53,9 @@ body {
     margin-top: 20px;
     padding-right: 30px;
 }
+body > div > div.nav > div > a:hover{
+    color: lightgreen;
+}
 .main {
     padding: 30px;
     height: 10em;
