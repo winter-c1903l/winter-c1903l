@@ -29,6 +29,7 @@ body {
     border-radius: 5%;
     padding-top: 10px;
     text-align: left;
+    padding-left: 10px;
 }
 .alignco{
     padding-top: 10px;
@@ -55,6 +56,27 @@ body {
 }
 body > div > div.nav > div > a:hover{
     color: lightgreen;
+}
+body > div > div.nav > div.button{
+    padding-top: 10px;
+}
+button{
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    background: none;
+    width: 70px;
+    height: 30px;
+    margin-top: -10px;
+    padding-top: 5px;
+    padding-left: 8px;
+    margin-right: 5px;
+    border-radius: 7%;
+    transition: .6s;
+}
+button:hover{
+    background: lightgreen;
+    color: white;
+    cursor: pointer;
 }
 .main {
     padding: 30px;
