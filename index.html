@@ -16,7 +16,14 @@
             <div class="logo">WINTER</div>
             <div class="alignco">Home</div>
             <div class="alignco">Link</div>
-            <div class="alignco">Dropdown</div>
+            <div class="dropdown" onclick="menu_open()">
+             <a>Dropdown <i class="fas fa-caret-down"></i></a>
+             <ul class="dropdown-menu"style="display: none">
+                 <li>action</li>
+                 <li>action</li>
+                 <li>action</li>
+             </ul>
+         </div>
             <div class="disable">Disable</div>
             <div class="wrapper2">Search</div>
             <div class="alignco">Button</div>
@@ -25,6 +32,22 @@
     <div class="pagination">Pagipation</div>
     <div class="footer">Footer</div>
 </div>
-
+<script src="https://kit.fontawesome.com/c79d60eb1d.js" data-auto-replace-svg="nest"></script>
+<script>
+    function menu_open() {
+        let x = document.querySelector('.dropdown-menu');
+        if(x.style.display ==='none'){
+            x.style.display ='block';
+        }else {
+            x.style.display = 'none';
+        }
+        let y = document.querySelector('.dropdown');
+        if (x.style.display === 'none'){
+            y.style.background = '#f8f8f8';
+        } else {
+            y.style.background = '#f7f7f7';
+        }
+    }
+</script>
 </body>
 </html>
