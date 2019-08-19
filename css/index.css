@@ -7,6 +7,9 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     margin: auto;
+    box-shadow: 10px 10px 50px;
+    animation-name: fade-in;
+    animation-duration: 1s;
 }
 
 .header {
@@ -115,4 +118,17 @@ body > div > div.nav > div > a:hover{
 .footer{
     padding: 30px;
     height: 10em;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+
 }
