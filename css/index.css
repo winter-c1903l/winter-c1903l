@@ -1,13 +1,12 @@
-/** {border: 1px solid grey;}*/
+/* {border: 1px solid grey;} */
 body {
     font-family: sans-serif;
-    margin: auto;
     font-size: 17px;
     text-align: center;
     max-width: 1200px;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    margin: auto;
 }
 
 .header {
@@ -18,10 +17,62 @@ body {
 }
 
 .nav {
-    padding: 30px;
-    height: 10em;
+    display: grid;
+    grid-template-columns: 100px 100px 150px 130px 320px 500px;
+    height: 50px;
+    padding-top: 15px;
+    background-color: #f8f8f8;
 }
-
+.alignco{
+    padding-top: 10px;
+}
+.disable{
+    padding-top: 10px;
+    text-align: left;
+    margin-left: 35px;
+}
+.logo{
+    padding-top: 10px;
+    color: lightgreen;
+}
+.dropdown{
+    padding-top: 10px;
+}
+.dropdown-menu{
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding-right: 30px;
+}
+body > div > div.nav > div > a:hover{
+    color: lightgreen;
+}
+.button{
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    background: none;
+    width: 70px;
+    height: 30px;
+    margin-top: -10px;
+    padding-top: 5px;
+    padding-left: 8px;
+    margin-right: 5px;
+    border-radius: 7%;
+    transition: .6s;
+    padding-bottom: 5px;
+}
+.button:hover{
+    background: lightgreen;
+    color: white;
+    cursor: pointer;
+}
+.search-txt{
+    border: 1px solid lightgray;
+    height: 30px;
+    padding-left: 10px;
+}
 .main {
     padding: 30px;
     height: 10em;
