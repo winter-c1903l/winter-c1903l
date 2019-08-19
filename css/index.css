@@ -1,4 +1,4 @@
-* {border: 1px solid grey;}
+/** {border: 1px solid grey;}*/
 body {
     font-family: sans-serif;
     margin: auto;
@@ -28,10 +28,39 @@ body {
 }
 
 .pagination {
+    border: 1px solid;
     padding: 30px;
     height: 10em;
 }
-
+.pagin {
+    padding-top: 150px;
+    border: 1px;
+    display: inline-block;
+    text-align: center;
+}
+.pagin a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.pagin a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+.pagin a:hover:not(.active) {background-color: #dddddd;}
+.pagin a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.pagin a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 .footer{
     padding: 30px;
     height: 10em;
