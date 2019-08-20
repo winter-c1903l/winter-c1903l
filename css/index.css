@@ -1,22 +1,28 @@
 /* {border: 1px solid grey;} */
+html{
+    background-image: url("https://img.freepik.com/free-vector/rustic-white-brick-background-vector_1453-216.jpg?size=338&ext=jpg");
+}
 body {
-    font-family: sans-serif;
+    font-family: "Cabin";
     font-size: 17px;
     text-align: center;
     max-width: 1200px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin: auto;
-    box-shadow: 10px 10px 50px;
+    box-shadow: 0 0 20px 1px;
     animation-name: fade-in;
     animation-duration: 1s;
+    background-color: white;
 }
 
 .header {
-    background-image: url("https://picsum.photos/1200/1500");
+    background-image: url("http://headerart.weebly.com/uploads/5/7/5/7/5757212/2602047_orig.jpg");
     background-size: cover;
     padding: 30px;
-    height: 10em;
+    height: 2em;
+    font-family: 'Abril Fatface';
+    font-size: 70px;
 }
 
 .nav {
@@ -25,6 +31,7 @@ body {
     height: 50px;
     padding-top: 15px;
     background-color: #f8f8f8;
+    box-shadow: 0px 3px 10px 1px;
 }
 .alignco{
     padding-top: 10px;
