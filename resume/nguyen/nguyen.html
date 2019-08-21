@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>responsive equal height column in a row</title>
+    <link rel="stylesheet" href="nguyen1.css">
+
+    <style>
+        .wrapper{
+            display:grid;
+            grid-template-columns: 2.1fr 3fr;
+            border: 1px solid rgba(122,0,0,.3);
+            margin-left: 15%;
+            margin-right: 20%;
+            background-color: white;
+        }
+        .background{
+            background-color: gainsboro;
+        }
+        .wrapper > div{
+            margin: 0.25em;
+            padding: 1em;
+        }
+        .wrapper >div:nth-child(odd){
+            background: darkslateblue;
+            margin-left: 0px;
+
+        }
+        .item{
+            padding: 1rem;
+            text-align: left;
+            color: white;
+        }
+
+        .item2{
+            background-color:lightgrey;
+            margin-left: -15px;
+            padding: 12px;
+            border: 1px solid rgba(122,0,0,.3);
+            height: 10em;
+        }
+
+        div,.debug*{
+            border: 1px solid #333333;
+        }
+        .hr{
+            display: block;
+            margin-top: .5em ;
+            margin-bottom: .5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        .pro{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+        .progressbar>div{
+            background-color: darkslateblue;
+            height: 10px;
+            border-radius: 10px;
+            margin-left: 5px;
+        }
+        .row1{width: 10%;}
+        .row2{width: 20%;}
+        .row3{width: 30%;}
+        .row4{width: 40%;}
+        .row5{width: 50%;}
+        .row6{width: 60%;}
+        .row7{width: 70%;}
+        .row8{width: 80%;}
+        .row9{width: 90%;}
+        body > div > div:nth-child(6) > hr{border-top-color: darkslateblue;}
+        body > div > div:nth-child(4) > hr{border-top-color: darkslateblue;}
+        body > div > div:nth-child(8) > hr{border-top-color: darkslateblue;}
+        body > div > div:nth-child(2) > hr{border-top-color: darkslateblue;}
+        body > div > div:nth-child(1) > img {
+            border-radius: 50%;
+        }
+        .subtitle{
+            display: grid;
+            grid-template-columns: 1fr ;
+        }
+        body > div > div.subtitle > div:nth-child(1) > h4{
+            margin-bottom: 0px;
+        }
+        body > div > div:nth-child(8),body > div > div:nth-child(6){
+            border-right:20px solid rgba(122,0,0,.1);
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+        }
+        .personal{
+            margin-left: 7%;
+            padding-left: 3rem;
+        }
+        body > div > div:nth-child(4) > div:nth-child(4) > div:nth-child(2):hover{
+            border-left: 3px solid darkslateblue;
+        }
+        body > div > div:nth-child(4) > div:nth-child(4) > div:nth-child(4):hover {
+            border-left: 3px solid darkslateblue;
+        }
+        body > div > div:nth-child(4) > div:nth-child(4) > div:nth-child(6):hover {
+            border-left: 3px solid darkslateblue;
+        }
+        body > div > div:nth-child(4) > div:nth-child(4) > div:nth-child(8):hover {
+            border-left: 3px solid darkslateblue;
+        }
+        body > div > div:nth-child(4) > div:nth-child(4) > div:nth-child(10):hover {
+            border-left: 3px solid darkslateblue;
+        }
+        body > div > div:nth-child(1) > img:hover{
+            border-radius: 30%;
+        }
+        .nav {
+            /*display: grid;*/
+            /*grid-template-columns: auto auto auto auto auto auto auto auto;*/
+            margin-left: 15%;
+            margin-right: 20%;
+            height: 50px;
+            padding-top: 15px;
+            background-color: darkslateblue;
+            color: white;
+        }
+        @media (min-width: 360px) {
+            .nav {
+                display: grid;
+                grid-template-columns: 80px 80px 70px 100px 250px 300px;
+            }
+        }
+        .alignco{
+            padding-top: 10px;
+            text-align: left;
+        }
+        .disable{
+            padding-top: 10px;
+            text-align: left;
+        }
+        .logo{
+            padding-top: 10px;
+            color: lightgreen;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .dropdown{
+            padding-top: 10px;
+            text-align: left;
+        }
+        .dropdown-menu{
+            list-style-type: none;
+            border: 1px solid white;
+            margin: 0;
+            padding: 0;
+            margin-top: 5px;
+            padding-right: 30px;
+            padding-left: 10px;
+        }
+        body > div.nav > div > a:hover{
+            color: lightgreen;
+        }
+        .button{
+            border: 1px solid lightgreen;
+            color: lightgreen;
+            background: none;
+            width: 70px;
+            height: 30px;
+            margin-top: 5px;
+            padding-top: 5px;
+            padding-left: 8px;
+            margin-right: 5px;
+            border-radius: 7%;
+            transition: .6s;
+            padding-bottom: 5px;
+        }
+        .button:hover{
+            background: lightgreen;
+            color: white;
+            cursor: pointer;
+        }
+        .search-txt{
+            border: 1px solid lightgray;
+            height: 30px;
+            padding-left: 10px;
+        }
+        body > div.nav > div.search-box{
+            border-right:20px solid gainsboro;
+        }
+        .pagination{
+            border: 1px solid rgba(122,0,0,.3);
+            margin-left: 15%;
+            margin-right: 20%;
+        }
+        .pagin{
+            text-align: center;
+            height: 60px;
+            padding-top: 30px;
+        }
+    </style>
+
+</head>
+<body class="background">
+<div class="nav">
+    <div class="logo">WINTER</div>
+    <div class="alignco"><a>Home</a></div>
+    <div class="alignco"><a>Link</a></div>
+    <div class="dropdown" onclick="menu_open()">
+        <a>Dropdown <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu"style="display: none">
+            <li>action</li>
+            <li>action</li>
+            <li>action</li>
+        </ul>
+    </div>
+    <div class="disable"><a>Disabled</a></div>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="text" placeholder="Search">
+        <input type="submit" name="submit" class="button" value="Search">
+    </div>
+</div>
+</div>
+<div class="pagination">
+    <div class="pagin">
+        <a href="#" class="first">FIRST</a>
+        <a href="#" class="prev">&laquo</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#" class="next">&raquo;</a>
+        <a href="#" class="last">LAST</a>
+    </div>
+</div>
+<div class="wrapper">
+    <div>
+        <img src="https://bit.ly/2Z3U6RL" alt="hello" width="300px" height="300px">
+    </div>
+    <div class="subtitle">
+        <div>
+            <H1>
+                <b>HOANG KHOI NGUYEN</b>
+            </H1>
+            <H4>
+                <b>WEB DEVELOPMENT</b>
+            </H4><hr>
+        </div>
+        <div>
+            <img src="https://www.seoclerk.com/pics/460696-1z0cfk1466847141.png" alt="hello" width="auto" height="200px">
+        </div>
+    </div>
+    <div class="item" >
+        <div><b>CONTACT</b></div>
+        <hr><br>
+        <div><i class="fa fa-phone"></i> &nbspPHONE: 0919062158</div>
+        <br>
+        <div><i class="fa fa-envelope"></i> &nbspEMAIL: hoangkhoinguyen3001@gmail.com</div>
+        <br>
+        <div><i class="fa fa-map-marker"></i> &nbspADDRESS: 62/10 Chu Thien St,Hiep Tan Ward,Tan Phu Country</div>
+        <br>
+        <div><b>EDUCATION</b></div>
+        <hr><br>
+        <div><i class="fa fa-star"></i> &nbsp; DEGREE NAME : ADSE</div><br>
+        <div><i class="fa fa-star"></i> &nbsp; UNIVERSITY NAME : APTECH</div><br>
+    </div>
+    <div >
+        <div><b>PERSONAL DETAIL</b></div>
+        <hr><br>
+        <div>
+            <div>2008-2010</div>
+            <div class="personal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque expedita facere fugiat harum minima.</div>
+            <div>2010-2013</div>
+            <div class="personal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque expedita facere fugiat harum minima.</div>
+            <div>2013-2015</div>
+            <div class="personal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque expedita facere fugiat harum minima.</div>
+            <div>2015-2019</div>
+            <div class="personal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque expedita facere fugiat harum minima.</div>
+            <div>2019-TODAY</div>
+            <div class="personal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque expedita facere fugiat harum minima.</div>
+        </div>
+    </div>
+    <div class="item">
+        <div>PERSONAL INFO</div>
+        <hr><br>
+        <div><i class="fa fa-male"></i> &nbsp; FATHER NAME :THANH HOANG</div><br>
+        <div><i class="fa fa-users"></i> RELATIONSHIP : MARRIED</div><br>
+        <div><i class="fa fa-flag-o"></i> NATIONALITY : VIETNAMESE</div><br>
+    </div>
+    <div>
+        <div><b>TECHNICAL SKILLS</b></div>
+        <hr><br>
+        <div class="pro">
+            <div>HTML</div>
+            <div class="progressbar">
+                <div class="row9"></div>
+            </div>
+            <div>90%</div>
+            <DIV>WORDPRESS</DIV>
+            <div class="progressbar">
+                <div class="row8"></div>
+            </div>
+            <div>80%</div>
+            <DIV>C/C++</DIV> <div class="progressbar">
+            <div class="row7"></div>
+        </div>
+            <div>70%</div>
+            <DIV>CSS</DIV> <div class="progressbar">
+            <div class="row6"></div>
+        </div>
+            <div>60%</div>
+            <DIV>JAVACRIPT</DIV> <div class="progressbar">
+            <div class="row5"></div>
+        </div>
+            <div>50%</div>
+        </div>
+    </div>
+    <div class="item">
+        <div><b>LANGUAGE</b></div>
+        <hr><br>
+        <div><i class="fa fa-star"></i> &nbsp; ENGLISH</div><br>
+        <div><i class="fa fa-star"></i> &nbsp; CHINESE</div><br>
+    </div>
+    <div>
+        <div><b>SOFTWARE SKILL</b></div>
+        <hr><br>
+        <div class="pro">
+            <div>PHOTOSHOP</div>
+            <div class="progressbar">
+                <div class="row5"></div>
+            </div>
+            <div>50%</div>
+            <DIV>WORDPRESS</DIV> <div class="progressbar">
+            <div class="row6"></div>
+        </div>
+            <div>60%</div>
+            <DIV>MS WORD</DIV> <div class="progressbar">
+            <div class="row7"></div>
+        </div>
+            <div>70%</div>
+            <DIV>MS EXCEL</DIV> <div class="progressbar">
+            <div class="row8"></div>
+        </div>
+            <div>80%</div>
+            <DIV>WEB STORM</DIV> <div class="progressbar">
+            <div class="row9"></div>
+        </div>
+            <div>90%</div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/c79d60eb1d.js" data-auto-replace-svg="nest"></script>
+<script>
+    function menu_open() {
+        let x = document.querySelector('.dropdown-menu');
+        if(x.style.display ==='none'){
+            x.style.display ='block';
+        }else {
+            x.style.display = 'none';
+        }
+        let y = document.querySelector('.dropdown');
+        if (x.style.display === 'none'){
+            y.style.background = 'darkslateblue';
+        } else {
+            y.style.background = 'darkslateblue';
+        }
+    }
+</script>
+</body>
+</html>

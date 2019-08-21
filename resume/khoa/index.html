@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>QUEST 2</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container {
+            box-sizing: border-box;
+            text-align: center;
+            margin: 100px;
+            /*border: 10px solid #22a6b3;*/
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            background-color:white;
+        }
+        .ab1{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        .skil{
+            width: 100%;
+            background-color: white;
+        }
+        .html {width: 20%; background-color: #0abde3;}
+        .css {width: 30%; background-color: #ee5253;}
+        .js {width: 20%; background-color: #ff9f43;}
+        .c {width: 40%; background-color: #f368e0;}
+
+        /*.edu1{*/
+        /*    display: grid;*/
+        /*    grid-template-columns: 3fr 2fr;*/
+        /*    padding: 0 100px 0 200px;*/
+        /*}*/
+        .fa{
+            padding:20px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+        .fa:hover{
+            -ms-transform: scale(1.5); /* IE 9 */
+            -webkit-transform: scale(1.5); /* Safari 3-8 */
+            transform: scale(1.5);
+        }
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        .fa-github{
+            background: black;
+            color: white;
+        }
+        .im, .na, .ab, .exp, .ski, .edu, .con, .fol {
+            /*margin: 0 5px 0 5px;*/
+            width: auto;
+            height: auto;
+            padding-top: 100px;
+            font-size: 19px;
+        }
+        .ab, .ski, .con {
+            border: 1px;
+            padding: 10px;
+            background-color: #22a6b3;
+        }
+        .exp, .edu, .fol, .na{
+            border: 1px;
+            padding: 10px;
+            background-color: #dff9fb;
+        }
+        .im{
+             background-color: #22a6b3;
+        }
+        .exp{
+            padding-bottom: 60px;
+            border-left: 1px;
+            display: grid;
+            grid-template-columns: 1.2fr 2fr 3fr;
+            background-color: #dff9fb;
+        }
+        .edu{
+            border: 1px;
+            display: grid;
+            grid-template-columns: 1.25fr 3fr;
+            padding-top: 35px;
+        }
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            margin-top: 100px;
+        }
+        h3, h4, h5, p, div{
+            text-align: left;
+        }
+        img{
+            border-radius: 50%;
+            height: auto;
+            width: auto;
+            margin-left: 5px;
+        }
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+        }
+        h3, h4, h5, p, div{
+            text-align: left;
+        }
+        .na{
+            background-image: linear-gradient(to right, #22a6b3,#7ed6df,#dff9fb);
+        }
+        #nam{
+            border: 1px;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 1px 1px;
+            text-align: center;
+            font-size: 100px;
+            margin-top: 10px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            /*resize: vertical;*/
+        }
+        .hobb{
+            text-align: center;
+        }
+        .fa-bicycle, .fa-music, .fa-hamburger, .fa-mug-hot{
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="im">
+<!--        <div>avatar</div>-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4EvDQRhP1ASSP_e-gZ8XzpgXDhj8JsOkPEBlOGWl3n3Y7IWx" style="width:250px" alt="Avatar">
+    </div>
+    <div class="na">
+<!--        <div>name/job</div>-->
+        <h1 style="text-align: center">HUYNH NHAT KHOA</h1>
+        <p id="nam"><em>Front-end Developer</em></p>
+    </div>
+    <div class="ab">
+<!--        <div>about me</div>-->
+        <h3><u>ABOUT ME</u></h3>
+        <ul class="ab1">
+            <li>Date of Birth</li>
+            <div>: 05/30/1992</div>
+            <li>Gender</li>
+            <div>: Male</div>
+            <li>&#9742</li>
+            <div>: +84 907286793</div>
+            <li>&#9993</li>
+            <div><a href="mailto:khoahner@gmail.com">:khoahner@gmail.com</a></div>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            A assumenda, cupiditate dicta dolor dolorem,
+            dolorum eius eligendi esse explicabo impedit ipsa laboriosam nesciunt quasi
+            quibusdam quis sed,
+            tenetur voluptate voluptatum.</p>
+        <h3><u>SKILLS</u></h3>
+        <p>.HTML</p>
+        <div class ="skil">
+            <div class="skills html">20%</div>
+        </div>
+        <p>.CSS</p>
+        <div class ="skil">
+            <div class="skills css">30%</div>
+        </div>
+        <p>.JS</p>
+        <div class ="skil">
+            <div class="skills js">20%</div>
+        </div>
+        <p>.C</p>
+        <div class ="skil">
+            <div class="skills c">40%</div>
+        </div>
+    </div>
+
+    <div class="exp">
+<!--        <div>experiment</div>-->
+        <div class="exp1"><h3><u>EXPERIMENT</u></h3></div>
+        <div class="exp2"></div>
+        <div class="exp3"></div>
+        <div class="exp4"><em>2015 - 2016</em></div>
+        <div class="exp5"><B>SMS:</B></div>
+        <div class="exp6">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate deleniti dicta eveniet
+                             Doloribus, harum.</div>
+        <div class="exp7"><em>2016 - 2017</em></div>
+        <div class="exp8"><B>SIEU VIET SOLUTION:</B></div>
+        <div class="exp9">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorem dolores eaque, eum
+                             suscipit ut voluptate?</div>
+        <div class="exp10"><em>2017 - 2019</em></div>
+        <div class="exp11"><B>MIRAE ASSET FINANCE:</B></div>
+        <div class="exp12">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda d
+                            suscipit ut voluptate?</div>
+    </div>
+    <div class="ski">
+
+        <h3><u>CONTACT</u></h3>
+        <form action="/action_page.php">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="edu">
+<!--        <div>education</div>-->
+            <div class="edu1"<h3><b><u>EDUCATION</u></b></h3></div>
+            <div class="edu2"></div>
+            <div class="edu3">2006 - 2010</div>
+            <div class="edu4">: GO VAP HIGHSCHOOL</div>
+            <div class="edu5">2010 - 2013</div>
+            <div class="edu6">: HOA SEN COLLEGE</div>
+            <div class="edu7">2012</div>
+            <div class="edu8">: NHAT NGHE TRAINING</div>
+            <div class="edu9">2017</div>
+            <div class="edu10">: VNPRO</div>
+            <div class="edu11">2019</div>
+            <div class="edu12">: APTECH</div>
+    </div>
+    <div class="con">
+        <h4><u>FOLLOW ME</u></h4>
+        <a href="www.twitter.com" class="fa fa-twitter"></a>
+        <a href="www.linkedin.com" class="fa fa-linkedin"></a>
+        <a href="www.github.com" class="fa fa-github"></a>
+    </div>
+    <div class="fol">
+        <h4><u>HOBBIES</u></h4>
+        <div class="hobb">
+            <i class='fas fa-music' style='font-size:40px'></i>
+            <i class='fas fa-bicycle' style='font-size:40px'></i>
+            <i class='fas fa-hamburger' style='font-size:40px'></i>
+            <i class='fas fa-mug-hot' style='font-size:40px'></i>
+        </div>
+    </div>
+</div>
+</body>
+</html>
