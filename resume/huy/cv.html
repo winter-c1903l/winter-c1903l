@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        HTML {
+            background-image: url("https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            -webkit-background-size: cover;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fade-in-2{
+            0% {
+                opacity: 0;
+            }
+            80%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+
+        }
+        #page-wrap{
+            width: fit-content;
+            height: fit-content;
+            margin: 40px auto;
+            background: white;
+            border: solid black;
+            box-shadow: 5px 5px 20px 5px;
+            -webkit-animation-name: fade-in;
+            -webkit-animation-duration: 3s;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 300px 700px;
+            -webkit-animation-name: fade-in;
+            -webkit-animation-duration: 3s;
+        }
+        .left{
+            background: lightgrey;
+            display: grid;
+            grid-template-rows: 700px auto;
+        }
+        .topleft{
+            text-align: center;
+            padding-top: 100px;
+        }
+        .btmleft{
+            text-align: center;
+            border-top: solid white;
+            padding-top: 50px;
+        }
+        .rightcontent
+        {
+            display:grid;
+            grid-template-columns: 700px;
+            text-align: left;
+            background: lightgrey;
+        }
+        .right-btm{
+            display: grid;
+            grid-template-columns: 300px 400px;
+            border: solid lightgrey 10px;
+            background: white;
+            -webkit-animation-name: fade-in-2;
+            -webkit-animation-duration: 2s;
+        }
+        .name{
+            font-family: Gabriola;
+            padding-top: 30px;
+            font-size: 60px;
+            line-height: 35px;
+        }
+        .undername{
+            font-family: Vijaya;
+            font-size: 30px;
+        }
+        .contact{
+            font-family: Gabriola;
+            font-size: 20px;
+            padding-top: 50px;
+        }
+        .CV{
+            background-color: lightgrey;
+            color: #00aff0;
+            font-size: 80px;
+            text-align: center;
+            font-family: ".Vn3DH";
+            padding-bottom: 50px;
+            padding-top: 50px;
+            -webkit-animation-name: fade-in;
+            -webkit-animation-duration: 3s;
+        }
+        .item1{
+            display: grid;
+            grid-template-rows: auto auto;
+            border-left: solid lightgrey;
+            text-align: center;
+            font-size: 30px;
+            padding:15px;
+            font-family: Vijaya;
+        }
+        .item2{
+            display: grid;
+            grid-template-rows: auto auto;
+            border-left: solid lightgrey;
+            text-align: left;
+            font-size: 30px;
+            padding:15px;
+            font-family: Vijaya;
+        }
+        .keySkills{
+            text-align: center;
+            font-family: Gabriola;
+            font-size: 60px;
+        }
+        img{
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px 2px;
+        }
+        img:hover{
+            transform: scale(1.3);
+            transition: all ease-in-out 0.5s;
+        }
+        .fa-youtube,.fa-skype,.fa-facebook,.mail{
+            font-size: 30px;
+            float:left;
+            padding-left: 20px;
+        }
+        a{
+            color: cornflowerblue;
+            font-family: Aharoni;
+            font-size: 20px;
+        }
+        progress {
+            width: 200px;
+            height: 14px;
+            -webkit-appearance: none;
+        }
+        progress::-webkit-progress-value {
+            border-radius: 50px;
+            background: cornflowerblue;
+        }
+        .sectionTitle{
+            text-align: center;
+            font-family: "Bookman Old Style";
+            font-size: 40px;
+            -webkit-animation-name: fade-in;
+            -webkit-animation-duration: 3s;
+        }
+        .aboutme{
+            text-align: center;
+            font-family: Vijaya;
+            background: white;
+            font-size: 30px;
+            padding: 20px;
+            border: solid lightgrey 10px;
+            -webkit-animation-name: fade-in-2;
+            -webkit-animation-duration: 2s;
+        }
+        p{
+            padding: 10px;
+            margin:10px
+        }
+        .topmenu li{
+            width: 300px;
+            height: 50px;
+            -webkit-animation-name: fade-in-2;
+            -webkit-animation-duration: 2s;
+        }
+        .topmenu ul {
+            position: fixed;
+            right: 220px;
+            list-style-type: none;
+            text-align: center;
+            -webkit-animation-name: fade-in-2;
+            -webkit-animation-duration: 3s;
+        }
+        .topmenu {
+            color: grey;
+        }
+        .sticky{
+            position: fixed;
+            right:180px;
+            top:0px;
+            list-style-type: none;
+            text-align: center;
+        }
+        ul{
+            margin: 0;
+        }
+        li{
+            border-left: 20px;
+            border-right: 20px;
+            cursor: pointer;
+        }
+        a:hover{
+            width: 100;
+            height: 100;
+            background-color: cornflowerblue;
+        }
+        .topmenu a{
+            color: dimgrey;
+        }
+
+    </style>
+</head>
+<body>
+<div id="page-wrap">
+    <div class="CV">PROFILE</div>
+
+    <div class="topmenu" id="myHeader">
+        <ul>
+            <li><a onclick="window.scroll(0,270)">About me</a></li>
+            <li><a onclick="window.scroll(0,550)" >Education</a></li>
+            <li><a onclick="window.scroll(0,1800)">Experience</a></li>
+            <li><a onclick="window.scroll(0,1800)">Interest</a></li>
+            <li><a onclick="window.scroll(0,0)">
+                <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            </a> </li>
+        </ul>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            var topmenu = document.getElementById("myHeader");
+            var sticky = topmenu.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    topmenu.classList.add("sticky");
+                } else {
+                    topmenu.classList.remove("sticky");
+                }
+            }
+        </script>
+    </div>
+    <div class="main">
+
+        <div class="left">
+            <div class="topleft">
+                <img src="https://cdn1.vectorstock.com/i/1000x1000/71/25/lightning-flash-on-transparent-background-thunder-vector-19867125.jpg" alt="Huy" onclick="alert('HELLO EVERYONE')">
+                <div class="name">HUY NGUYỄN
+                    <div class="undername">Web Developer</div>
+                </div>
+                <div class="contact">
+                    <i class="mail">
+                        <i style="padding-right: 3px">&#9993;</i><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">nguyenhuy304@gmail.com</a>
+                    </i>
+                    <br>
+                    <i class="fa fa-youtube">
+                        <a href="https://www.youtube.com/?gl=VN" target="_blank">Youtube.com</a>
+                    </i>
+                    <br>
+                    <i class="fa fa-skype">
+                        <a href="https://www.skype.com/en/" target="_blank">Skype.com</a>
+                    </i>
+                    <br>
+                    <i class="fa fa-facebook">
+                        <a href="https://www.facebook.com/" target="_blank">Facebook.com</a>
+                    </i>
+                </div>
+            </div>
+            <div class="btmleft">
+                <div class="keySkills">SKILLS</div>
+                <UL>
+                    <LI>
+                        Skill 1:<PROGRESS MAX="100" value="20"></PROGRESS>
+                    </LI>
+                    <LI>
+                        Skill 2:<PROGRESS MAX="100" value="20"></PROGRESS>
+                    </LI>
+                    <LI>
+                        Skill 3:<PROGRESS MAX="100" value="80"></PROGRESS>
+                    </LI>
+                </UL>
+            </div>
+        </div>
+        <div class="rightcontent">
+
+            <div class="sectionTitle">ABOUT ME</div>
+            <div class="aboutme"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum laboriosam nulla recusandae voluptatum! Cumque distinctio error, nam odit optio voluptates? Aut doloribus laboriosam perferendis placeat quae recusandae reprehenderit unde?</div>
+            <div class="sectionTitle">EDUCATION</div>
+            <div class="right-btm">
+                <div class="item1">
+                    <p>2010</p>
+                    <p>2016</p>
+                </div>
+                <div class="item2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum laboriosam nulla recusandae voluptatum! Cumque distinctio error, nam odit optio voluptates? Aut doloribus laboriosam perferendis placeat quae recusandae reprehenderit unde?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolor ex exercitationem iure laboriosam mollitia nemo nisi velit. Earum iste, magni nam provident quia quibusdam quod repudiandae soluta veritatis voluptatibus.</p>
+                </div>
+            </div>
+            <div class="sectionTitle">EXPERIENCE</div>
+            <div class="right-btm">
+                <div class="item1">ABC</div>
+                <div class="item2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum laboriosam nulla recusandae voluptatum! Cumque distinctio error, nam odit optio voluptates? Aut doloribus laboriosam perferendis placeat quae recusandae reprehenderit unde?</div>
+            </div>
+            <div class="sectionTitle">INTEREST</div>
+            <div class="aboutme"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum laboriosam nulla recusandae voluptatum! Cumque distinctio error, nam odit optio voluptates? Aut doloribus laboriosam perferendis placeat quae recusandae reprehenderit unde?</div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
