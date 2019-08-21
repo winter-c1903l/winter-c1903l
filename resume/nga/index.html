@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="javascript" type="text/javascript" href="scripts.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    /** {border: 1px solid grey;}*/
+    /*bat su kien luc trang web load
+    javacript dien html vao element cua html khac
+    lay element co menu */
+
+    body {
+        font-family: sans-serif;
+        margin: auto;
+        font-size: 17px;
+        text-align: left;
+        max-width: 1200px;
+        padding: 18px;
+        color: grey;
+        box-shadow: 5px 10px 18px #888888;
+    }
+
+    .div {
+        line-height: normal;
+        clear: both;
+    }
+
+    .wrapper {
+        padding: 18px;
+        background: rgb(245,249,247);
+        background: linear-gradient(90deg, rgba(245,249,247,1) 0%, rgba(120,203,250,1) 100%, rgba(30,169,252,1) 100%, rgba(30,169,252,1) 100%, rgba(249,208,240,0) 100%, rgba(225,143,250,1) 100%);
+    }
+    .header {
+        color:#0794e0;
+        background-image: url("https://picsum.photos/1200/1500");
+        background-size: cover;
+        padding: 30px;
+        margin-bottom: 10px;
+        height: 1em;
+    }
+
+    /*navigation*/
+    .topnav {
+        overflow: hidden;
+        position: relative;
+        background: rgb(245,249,247);
+        background: linear-gradient(90deg, rgba(245,249,247,1) 0%, rgba(120,203,250,1) 100%, rgba(30,169,252,1) 100%, rgba(30,169,252,1) 100%, rgba(249,208,240,0) 100%, rgba(225,143,250,1) 100%);
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        padding:16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        color:#1aaafb;
+    }
+
+    .topnav a.icon {
+        background: #ede0e8;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        color:#0794e0;
+        transition-duration: 0.1s;
+    }
+
+    .topnav #myLinks a:hover {
+        font-size: 25px;
+    }
+
+    .topnav a.active {
+        background: rgb(56, 165, 224);
+        color:#ffffff;
+    }
+
+    .topnav input[type="text"] {
+        cursor: pointer;
+    }
+
+    .topnav input[type=text]{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+
+
+    /*Main content*/
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        /*height: 150px;*/
+        width: auto;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        flex-basis: 3em;
+        flex-grow: 1;
+    }
+    /*About me*/
+
+    .aboutme img {
+        border-radius: 50%;
+        width: 150px;
+
+    }
+
+    .container img {
+        padding: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    /*Pro skills*/
+    .professional,
+    .personal {
+        height: 50px;
+    }
+
+    .skills {
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    }
+
+    .teamwork {width: 60%; background-color: #1ea9fc;}
+    .communication {width: 50%; background-color: #1ea9fc;}
+    .leadership {width: 40%; background-color: #1ea9fc;}
+
+    .photoshop {width: 30%; background-color: #1ea9fc;}
+    .word_press {width: 20%; background-color: #1ea9fc;}
+    .html {width: 10%; background-color: #1ea9fc;}
+
+
+    /*Exp*/
+    .experience {
+        height: 160px;
+    }
+
+    .education{
+        height: 100px;
+    }
+
+
+    /*Contact form*/
+    .form-container input[type=text], select, textarea {
+        font-family: sans-serif;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical
+    }
+
+    .form-container input[type=submit] {
+        font-family: sans-serif;
+        background-color: white;
+        color: grey;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form-container input[type=submit]:hover {
+        background-color: #1ea9fc;
+        color:white;
+    }
+
+    .form-container {
+        border-radius: 5px;
+        padding: 20px;
+        display: block;
+        text-align: left;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    /*Pagination*/
+    .pagination {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    /*.center {text-align: center;}*/
+    .pagination a{
+        font-size: 12px;
+        color: grey;
+        float: left;
+        padding: 4px 8px;
+        text-decoration: none;
+        transition: background-color  .3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+    }
+
+    .pagination a.active {
+        background-color: #1facfd;
+        color: white;
+        border: 1px solid #1facfd;
+    }
+
+    .pagination a:hover:not(.active) {
+        background-color: #1facfd;
+        transition-duration: 0.1s;
+        color: white;
+        cursor: pointer;
+    }
+
+    .pagination a:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .pagination a:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+
+
+    /*Footer*/
+    .footer {
+        padding: 30px;
+    }
+
+
+
+    /*.personal .left {*/
+    /*    order: 1;*/
+    /*}*/
+
+    /*Responsive*/
+
+    @media screen and (min-width: 600px) {
+        .container {
+            flex-direction: row;
+        }
+
+        .left {
+            width: 25%;
+        }
+
+        .topnav a.icon {
+            display: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            color:#0794e0;
+            transition-duration: 0.1s;
+        }
+
+        .topnav {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .topnav #myLinks{
+            display: flex !important;
+            /*flex-direction: row;*/
+            justify-content: space-between;
+        }
+
+        .pagination a {
+            padding: 4px 8px;
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .pagination a {
+            padding: 4px 8px;
+            font-size: 35px;
+        }
+
+        .experience {
+            height: 100px;
+        }
+
+        .education{
+            height: 80px;
+        }
+    }
+
+
+</style>
+<body>
+<div class="wrapper">
+    <!--    Header-->
+    <div class="header"></div>
+    <div class="topnav">
+        <a href="index.html" class="active">HOME</a>
+        <div id="myLinks">
+            <div class="nav"><a href="#edu">Education</a></div>
+            <div class="nav"><a href="#exp">Experience</a></div>
+            <div class="nav"><a href="#skills">Skills</a></div>
+            <div>
+
+            </div>
+
+            <input type="text" placeholder="Search.." name="search">
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!--    Main content-->
+    <div class="main">
+
+        <!--        About me-->
+        <div class="container aboutme">
+            <div><img src="img.png" alt="avatar"></div>
+            <div class="right">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div>
+        </div>
+
+        <!--        Education-->
+        <h3 id="edu">Education</h3>
+        <div class="container education">
+            <div class="left"><em>2008 - 2012</em></div>
+            <div class="right">
+                <div><b>Ho Chi Minh City University of Foreign Languages and Information Technology</b></div>
+                <div>Bachelor of Japanese studies</div>
+            </div>
+        </div>
+
+        <div class="container education">
+            <div class="left"><em>2019 - Expected 2021</em></div>
+            <div class="right">
+                <div><b>Aptech Computer Education</b></div>
+                <div>Advanced Diploma in Software Engineering</div>
+            </div>
+        </div>
+
+        <!--        Experience-->
+        <h3 id="exp">Experience</h3>
+        <div class="container experience" >
+            <div class="left">
+                <div><b>ZIGEXN</b></div>
+                <div><em>2013 - 2016</em></div>
+            </div>
+            <div class="right">
+                <div><b>IT COMTOR</b></div>
+                <div>Translating documents Japanese &#8644 Vietnamese</div>
+                <div>Interpreting in the meeting, support team in sales</div>
+            </div>
+        </div>
+
+        <div class="container experience">
+            <div class="left">
+                <div><b>BISYNC</b></div>
+                <div><em>2016 - 2018</em></div>
+            </div>
+            <div class="right">
+                <div><b>IT COMTOR</b></div>
+                <div>Translating documents Japanese &#8644 Vietnamese</div>
+                <div>Interpreting in the meeting, support Managers</div>
+                <div>Execute tests and report bugs</div>
+            </div>
+        </div>
+
+        <!--        Personal-->
+        <h3 id="skills">Personal skills</h3>
+        <div class="container personal">
+            <div class="left"><b>TEAM WORK</b></div>
+            <div class="right">
+                <div class="skills teamwork"></div>
+            </div>
+        </div>
+
+        <div class="container personal">
+            <div class="left"><b>COMMUNICATION</b></div>
+            <div class="right">
+                <div class="skills communication"></div>
+            </div>
+        </div>
+
+        <div class="container personal">
+            <div class="left"><b>LEADERSHIP</b></div>
+            <div class="right">
+                <div class="skills leadership"></div>
+            </div>
+        </div>
+
+        <!--        Professional-->
+        <h3>Professional skills</h3>
+
+        <div class="container professional">
+            <div class="left"><b>PHOTOSHOP</b></div>
+            <div class="right">
+                <div class="skills photoshop"></div>
+            </div>
+        </div>
+
+        <div class="container professional">
+            <div class="left"><b>WORDPRESS</b></div>
+            <div class="right">
+                <div class="skills word_press"></div>
+            </div>
+        </div>
+
+        <div class="container professional">
+            <div class="left"><b>HTML</b></div>
+            <div class="right">
+                <div class="skills html"></div>
+            </div>
+        </div>
+
+        <!--        Reference-->
+        <div class="reference">
+            <h3>REFERENCE</h3>
+            <div><b>NAM GIANG VU</b></div>
+            <div><em>Full Stack Engineer at Gigacover</em></div>
+            <div><a href="https://github.com/namgivu"><em>https://github.com/namgivu</em></a></div>
+            <div><a href="mailto:namgivu@gmail.com"><em>namgivu@gmail.com</em></a></div>
+        </div>
+
+
+        <!--        Contact-->
+        <div class="form-container">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="subject">Subject</label>
+            <textarea name="subject" id="subject" placeholder="Write something.." style="height:30px"></textarea>
+
+            <label for="content">Content</label>
+            <textarea name="content" id="content" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </div>
+
+    </div>
+
+
+    <!--    Footer-->
+    <div class="footer">
+        <footer>
+            <p>Design by: Nga Nguyen</p>
+            <p>Contact information: <a href="mailto:nguyentuyetnga0209@gmail.com">nguyentuyetnga0209@gmail.com</a>.</p>
+        </footer>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
