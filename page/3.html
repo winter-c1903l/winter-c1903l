@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="javascript" type="text/javascript"  href="/js/index.js">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin&display=swap" rel="stylesheet">
+</head>
+<style>
+
+</style>
+<body>
+
+<div class="container">
+    <div class="header">Header</div>
+    <div class="nav">
+        <div class="logo">WINTER</div>
+        <div class="alignco"><a>Home</a></div>
+        <div class="alignco"><a>Link</a></div>
+        <div class="dropdown" onclick="menu_open()">
+            <a>Dropdown <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu"style="display: none">
+                <li>action</li>
+                <li>action</li>
+                <li>action</li>
+            </ul>
+        </div>
+<!--        <div class="disable"><a>Disabled</a></div>-->
+        <div class="search-box">
+            <input class="search-txt" type="text" name="text" placeholder="Search">
+            <input type="submit" name="submit" class="button" value="Search">
+        </div>
+    </div>
+    <div class="main">
+        <h3>photo 3</h3>
+        <img src="https://picsum.photos/800/200" alt="photo">
+    </div>
+    <div class="pagination">
+        <div class="pagin">
+            <a href="../index.html" class="first">FIRST</a>
+            <a href="2.html" class="prev">&laquo;</a>
+            <a href="../index.html">1</a>
+            <a href="2.html">2</a>
+            <a class="active" href="3.html">3</a>
+            <a href="4.html">4</a>
+            <a href="5.html">5</a>
+            <a href="4.html" class="next">&raquo;</a>
+            <a href="5.html" class="last">LAST</a>
+        </div>
+    </div>
+    <div class="footer">Footer</div>
+</div>
+<script src="https://kit.fontawesome.com/c79d60eb1d.js" data-auto-replace-svg="nest"></script>
+<script>
+    function menu_open() {
+        let x = document.querySelector('.dropdown-menu');
+        if(x.style.display ==='none'){
+            x.style.display ='block';
+        }else {
+            x.style.display = 'none';
+        }
+        let y = document.querySelector('.dropdown');
+        if (x.style.display === 'none'){
+            y.style.background = '#f8f8f8';
+        } else {
+            y.style.background = '#f7f7f7';
+        }
+    }
+</script>
+</body>
+</html>
